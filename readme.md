@@ -1,4 +1,4 @@
-#DimensionJumper
+#DimensionJumper#
 ___________________
 *This project is my personal learning session, by writing this software i learned some basics skills in AngularJS, HTML and CSS development.*
 
