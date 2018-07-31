@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <script src="angular.min.js"></script>
+  <script src="game_floor.js"></script>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="ToggleSwitch.css">
+  <link rel="stylesheet" type="text/css" href="black_Hole.css">
+</head>
+
+<body ng-app="gamefloor" ng-controller="myCtrl">
+
+  <div class="bodyBGC" id="all">
+
+    <div class="realtimeButtons">
+    <p class="jbutton" id="realtime_events">
+        <input type="submit" value="STOP" id="stopb" name="stopb" disabled ng-click="stop()"></input>
+        <input type="submit" value="HOLYJUMP!" id="hj" name="hj" disabled ng-click="holyjump()"></input>
+        <input type="submit" value="DimensionalTravel" id="dt" name="dt" ng-click="inverted_Dimension_Travel()"></input>
+    </p>
+    </div>
+
+    <div class="bigbox">
+    <div class="playfield">
+      <div ng-repeat="platform in playfield track by $index" class="row">
+        <div ng-if="platform.player==true && platform.blackholevent==false" class="player" id="player"></div>
+        <div ng-if="platform.player==true && platform.blackholevent==false" class="playfield__elementswithplayer">
+          {{platform.min + "-" + platform.max}}
+        </div>
+        <div ng-if="platform.player==false && platform.blackholevent==false" class="playfield__elements">
+          {{platform.min + "-" + platform.max}}
+        </div>
+        <div ng-if="platform.blackholevent==true" class="container">
+          <div class="wrapper">
+             <div class="blackhole">
+               <div class="debris"></div>
+               <div class="debris"></div>
+               <div class="debris"></div>
+               <div class="debris"></div>
+               <div class="debris"></div>
+               <div class="debris"></div>
+               <div class="debris"></div>
+               <div class="debris"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class= "instructions">
+      <p ng-bind="'Your position: ' + (ind)"></p>
+      <p>Your destination: {{playfield.length-1}}</p>
+      <p ng-bind="'Holy Jumps: ' + (holyjumpcounter)"></p>
+    </div>
+
+    <form ng-submit="jumpit(datmuch)" id="jform" >
+      <div class="switch" >
+
+        <input name="switch" id="one" type="radio" value="{{playfield[ind].min}}" ng-model="datmuch"></input>
+        <label for="one" class="switch__label" >
+          <div class="contenitore">
+            <div class="ball"></div>
+            <div class="contenuto">{{playfield[ind].min}}</div>
+          </div>
+        </label>
+
+        <input name="switch" id="two" type="radio" value="0" ng-model="datmuch" checked></input>
+          <label for="two" class="switch__label" >
+            <div class="contenitore">
+              <div class="ball"></div>
+              <div class="contenuto">-</div>
+            </div>
+          </label>
+
+        <input name="switch" id="three" type="radio" value="{{playfield[ind].max}}" ng-model="datmuch"></input>
+        <label for="three" class="switch__label" >
+          <div class="contenitore">
+            <div class="ball"></div>
+            <div class="contenuto">{{playfield[ind].max}}</div>
+          </div>
+        </label>
+
+        <div class="switch__indicator"></div>
+      </div>
+
+      <p class= "instructions">
+        <input type="submit" value="JUMP!" id="sj" name="submit"></input>
+      </p>
+
+    </form>
+
+    </div>
+  </div>
+</body>
+</html>
