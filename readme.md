@@ -13,6 +13,7 @@ A game field between 15 and 25 squared units is created. Every squared unit rapr
 The jump range is defined by the dimension in wich you are placed (you start from the first) so you can select one of the two jump ranges writen on the square unit by using the toggle switch in the lower area of the UI and confirming the jump by pressing the button "JUMP!".
 Every time you do a Dimension Jump the dimension of destination maybe collaps causing a black hole that kill you but you can stop the jump by pressing the "STOP" button within 500ms or you can stabilize that black hole by pressing the "HOLY JUMP!" (only three usage per level) within 2200ms and complete the jump.
 You can also jump backward by activating the "DimensionalTravel" mode by pressing the relative button.
+To win, the player have to reach the last Dimension (squared unit) without getting killed by a stupid blackhole or by falling in the non existence field.
 
 
 ## Authors ##
