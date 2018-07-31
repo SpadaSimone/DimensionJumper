@@ -15,8 +15,8 @@ Every time you do a Dimension Jump the dimension of destination maybe collaps ca
 You can also jump backward by activating the "DimensionalTravel" mode by pressing the relative button.
 
 
-# Authors #
+## Authors ##
 *Simone Spada*
 
-# Thanks To #
+## Thanks To ##
 *Mattia Colleoni, Alessandro Mariotti, Antonio Visalli*
