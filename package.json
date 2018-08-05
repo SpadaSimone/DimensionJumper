@@ -1,0 +1,12 @@
+{
+  "name": "DJ",
+  "version": "1.0.0",
+  "description": "Learning Session",
+  "main": "index.js",
+  "repository": "https://github.com/SpadaSimone/DimensionJumper.git",
+  "author": "SpadaSimone <s.spada94@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "1.6.5"
+  }
+}
