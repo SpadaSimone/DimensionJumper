@@ -3,7 +3,9 @@
 *This project is my personal learning session, by writing this software i learned some basics skills in AngularJS, HTML and CSS development.*
 
 **Getting started:**
-Pull this project or download it from https://github.com/SpadaSimone/DimensionJumper, then open the "main.html" file to run the Game in Google Chrome Browser.
+Pull this project or download it from https://github.com/SpadaSimone/DimensionJumper.
+Open Terminal in the project folder and run "yarn install".
+Open "main.html" file to run the Game in Google Chrome Browser.
 
 **Prerequisite:**
 Google Chrome Browser
