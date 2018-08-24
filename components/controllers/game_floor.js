@@ -1,19 +1,3 @@
-
-//Il campo di gioco viene creato in maniera casuale in base a delle regole prestabilite
-//1) il campo di gioco ha una estensione che va da 15 a 25 unità
-//2) ogni unità permette al player di fare un salto dimensionale che ha un range che va da 1 a 5 unità
-//3) ci deve essere almeno un percorso vincente
-
-//L'obbiettivo del gioco è raggiungere l'ultima piattaforma dimensionale del percorso
-
-//Il giocatore è ostacolato da dei buchi neri creati dalla destabilizzazione causata dal salto dimensionale
-//1) i buchi neri possono essere eliminati grazie all'holyjump (3 a disposizione), che permette quindi la riuscita del salto
-//2) i buchi neri si auto stabilizzano in un periodo prestabilito
-//3) il player ha a disposizione un tot di tempo per fermare il suo salto e aspettare la stabilizzazione (infinite volte)
-
-
-
-
 var app = angular.module("gamefloor", [])
 .controller("myCtrl", ['$scope', '$timeout', '$window', function($scope, $timeout, $window) {
 
@@ -178,7 +162,7 @@ var app = angular.module("gamefloor", [])
       };
       $timeout(function() {       //esegui il salto
           if($scope.stopevent == false) {
-          $scope.jumpselected($scope.ind);
+          //$scope.jumpselected($scope.ind);
           $scope.playfield[$scope.ind].player = false;
           $scope.ind = $scope.ind + selection;
           $scope.indtesto = "Your position: " + $scope.ind;
@@ -213,7 +197,7 @@ var app = angular.module("gamefloor", [])
       };
       $timeout(function() {       //esegui il salto
           if($scope.stopevent == false) {
-          $scope.jumpselected($scope.ind);
+          //$scope.jumpselected($scope.ind);
           $scope.playfield[$scope.ind].player = false;
           $scope.ind = $scope.ind - selection;
           $scope.indtesto = "Your position: " + $scope.ind;
@@ -296,7 +280,7 @@ var app = angular.module("gamefloor", [])
   $scope.holyjumpcounter = 3;
   $scope.playfield = searchplayfield(createplayfield(16, 26));
   $scope.ind = 0;
-  $scope.jumpselected($scope.ind);
+  //$scope.jumpselected($scope.ind);
   $scope.playfieldcontainer = [$scope.playfield[$scope.ind].min,$scope.playfield[$scope.ind].max];
   $scope.datmuch = 0;
 }]);
